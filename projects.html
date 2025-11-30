@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Projects – Sefa Avci</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet">
+    </head>
+
+    <body class="theme-dark">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow-sm">
+            <a class="navbar-brand brand" href="index.html">Sefa Avci</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#nav" aria-controls="nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="nav">
+                <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item active"><a class="nav-link" href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ml-md-3">
+                        <div class="custom-control custom-switch">
+                            <input type="checkbox" class="custom-control-input" id="themeSwitch" aria-label="Theme switch">
+                            <label class="custom-control-label text-light" for="themeSwitch">Light mode</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <main class="container pt-5">
+            <header class="mt-4 mb-4 text-center">
+                <h1>Projects</h1>
+                <p class="text-muted mb-0">
+                    A selection of software, hardware, and coursework projects spanning algorithms, web development, and systems programming.
+                </p>
+            </header>
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
+                        <h3 class="card-title">Game of Life – RISC-V Assembly Implementation</h3>
+                        <h6 class="text-muted mb-2">CS-200 · EPFL · Semester 3</h6>
+                        <p class="text-muted">Built with RISC-V Assembly</p>
+
+                        <p>
+                            This project implements a complete version of Conway’s <strong>Game of Life</strong>
+                            entirely in <strong>RISC-V assembly</strong>, running on the <em>Gecko5</em> simulator board. 
+                            The game evolves cell states on a 10×12 LED grid according to the classic rules
+                            (underpopulation, overpopulation, reproduction, stasis).
+                        </p>
+
+                        <p>
+                            The implementation handles LED rendering, random seed generation, masks (walls),
+                            user inputs through hardware buttons, speed control, step counting on a 7-segment display,
+                            and a full state machine (INIT → RAND → RUN).
+                        </p>
+
+                        <ul class="mb-3">
+                            <li>Full LED drawing pipeline (clear, pixel-set, draw GSA).</li>
+                            <li>Two-buffer GSA system with automatic swapping.</li>
+                            <li>Random and predefined seeds with wall masks.</li>
+                            <li>Hardware button controls: pause, speed, randomize, reset, next seed.</li>
+                            <li>7-segment step counter and adjustable run length.</li>
+                        </ul>
+
+                        <h5 class="mt-4 mb-3">Images</h5>
+
+                        <div id="game_of_life_Carousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#game_of_life_Carousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#game_of_life_Carousel" data-slide-to="1"></li>
+                                <li data-target="#game_of_life_Carousel" data-slide-to="2"></li>
+                            </ol>
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="images/game_of_life_1.png" class="d-block w-35 mx-auto rounded" alt="game of life 1">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/game_of_life_2.png" class="d-block w-35 mx-auto rounded" alt="game of life 2">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/game_of_life_3.png" class="d-block w-35 mx-auto rounded" alt="game of life 3">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a class="carousel-control-prev" href="#game_of_life_Carousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#game_of_life_Carousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
+                        <h3 class="card-title">ReCHor – Swiss Public Transport Route Planner</h3>
+                        <h6 class="text-muted mb-2">CS-108 · EPFL · Semester 2</h6>
+                        <p class="text-muted">Built with Java</p>
+                        <p class="card-text">
+                            ReCHor is an offline public transport timetable search engine for Switzerland, similar in spirit
+                            to cff.ch or search.ch. Given a departure stop, destination, date and time, it computes
+                            <strong>Pareto-optimal</strong> journeys that balance departure time, arrival time and number of
+                            transfers.
+                        </p>
+                        <p class="card-text">
+                            The project is structured in weekly milestones and focuses on algorithmic design,
+                            data structures and code quality. It loads the official Swiss public transport schedule locally,
+                            computes optimal routes, and can export trips to iCalendar or visualize them on a map.
+                        </p>
+                        <ul class="mb-3">
+                            <li>Implements multi-criteria route search (Pareto-optimal journeys).</li>
+                            <li>Offline timetable data; no internet connection required at query time.</li>
+                            <li>Exports results to iCalendar and supports map visualization (via uMap / OpenStreetMap).</li>
+                        </ul>
+
+                        <h5 class="mt-4 mb-3">Images</h5>
+
+                        <div id="rechorCarousel" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#rechorCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#rechorCarousel" data-slide-to="1"></li>
+                                <li data-target="#rechorCarousel" data-slide-to="2"></li>
+                            </ol>
+
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active">
+                                    <img src="images/rechor-gui.png" class="d-block mx-auto rounded responsive-img" alt="ReCHor GUI">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/umap.png" class="d-block mx-auto rounded responsive-img" alt="uMap visualization">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/icalendar.png" class="d-block mx-auto rounded responsive-img" alt="iCalendar export">
+                                    <div class="carousel-caption d-none d-md-block">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <a class="carousel-control-prev" href="#rechorCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#rechorCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
+                        <h3 class="card-title">Online BlackJack – Full-Stack Web App</h3>
+                        <h6 class="text-muted mb-2">CS50x Final Project · Harvard</h6>
+                        <p class="text-muted">Built with Python, Flask, JavaScript, HTML/CSS</p>
+                        <p class="card-text">
+                            <strong>Online BlackJack</strong> is a full-stack web application that lets a single player
+                            practice Blackjack against a dealer with a clean, modern UI and persistent statistics.
+                            It is built with <strong>Flask (Python)</strong>, <strong>SQLite via SQLAlchemy</strong> and a
+                            front-end in <strong>HTML/CSS/JavaScript</strong>, using <strong>Chart.js</strong> to visualize
+                            net wins over time.
+                        </p>
+                        <p class="card-text">
+                            The app implements realistic Blackjack rules (dealer stands on 17, 3:2 blackjack payout, double
+                            after split, single split max) and separates concerns between server, client and database. A
+                            basic-strategy <em>Bot Advice</em> helper suggests optimal actions, and a simple leaderboard
+                            tracks performance.
+                        </p>
+                        <ul class="mb-3">
+                            <li>Flask back-end with JSON APIs for game actions and statistics.</li>
+                            <li>Persistent user accounts and round history using SQLite/SQLAlchemy.</li>
+                            <li>Interactive UI with animations and a running P/L chart via Chart.js.</li>
+                        </ul>
+
+                        <a href="https://www.youtube.com/watch?v=TJfhrD0XSJ4"
+                        target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
+                            Watch demo
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
+                        <h3 class="card-title">ICoop – Cooperative 2D Puzzle-Adventure Game</h3>
+                        <h6 class="text-muted mb-2">CS-107 · EPFL · Semester 1</h6>
+                        <p class="text-muted">Built with Java</p>
+                        <p>
+                            ICoop is a cooperative 2D grid-based game built on top of a custom Java game engine.
+                            Two elemental characters must collaborate to traverse areas, activate doors, trigger
+                            explosives, solve puzzles, and defeat enemies. The project focuses on object-oriented
+                            design, interactions between actors, signals (logic), and extensible gameplay mechanics
+                            across multiple stages.
+                        </p>
+                        <p>
+                            Over the different steps, we implemented doors, explosives, pressure plates, elemental
+                            walls (fire/water), health bars, dialogues, collectables (orbs, hearts), enemies, and
+                            final arena challenges, all driven by clean abstractions and interaction handlers.
+                        </p>
+
+                        <h5 class="mt-4 mb-3">Images</h5>
+
+                        <div id="icoopCarousel" class="carousel slide uniform-carousel" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#icoopCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#icoopCarousel" data-slide-to="1"></li>
+                                <li data-target="#icoopCarousel" data-slide-to="2"></li>
+                                <li data-target="#icoopCarousel" data-slide-to="3"></li>
+                                <li data-target="#icoopCarousel" data-slide-to="4"></li>
+                            </ol>
+
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="images/icoop_1.png" class="d-block mx-auto rounded responsive-img" alt="ICoop screenshot 1">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/icoop_2.png" class="d-block mx-auto rounded responsive-img" alt="ICoop screenshot 2">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/icoop_3.png" class="d-block mx-auto rounded responsive-img" alt="ICoop screenshot 3">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/icoop_4.png" class="d-block mx-auto rounded responsive-img" alt="ICoop screenshot 4">
+                                </div>
+
+                                <div class="carousel-item">
+                                    <img src="images/icoop_5.png" class="d-block mx-auto rounded responsive-img" alt="ICoop screenshot 5">
+                                </div>
+                            </div>
+
+                            <a class="carousel-control-prev" href="#icoopCarousel" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </a>
+                            <a class="carousel-control-next" href="#icoopCarousel" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
+                        <h3 class="card-title">BlackJack – Terminal Game with ASCII Graphics</h3>
+                        <h6 class="text-muted mb-2">CS50’s Introduction to Programming with Python Final Project</h6>
+                        <p class="text-muted">Built with Python (ANSI/terminal rendering)</p>
+                        <p class="card-text">
+                            This project is a terminal-based implementation of the classic card game
+                            <strong>Blackjack</strong>, with stylized ASCII graphics and a casino-style feel. It runs entirely
+                            in the terminal, using ANSI escape codes to clear the screen, control the cursor and add colored
+                            output.
+                        </p>
+                        <p class="card-text">
+                            The game manages a bankroll, betting, dealer logic and hand evaluation with support for
+                            Aces counting as 1 or 11, Blackjack detection and clear separation between player and dealer
+                            phases. A dedicated <code>test_project.py</code> suite built with <strong>pytest</strong> ensures
+                            correctness of the core logic (deck handling, hand values, Blackjack detection).
+                        </p>
+                        <ul class="mb-3">
+                            <li>Multi-deck shoe, realistic dealer behavior and bankroll management.</li>
+                            <li>ASCII card rendering with colored suits and a hidden dealer card.</li>
+                            <li>Unit tests for core mechanics using <code>pytest</code>.</li>
+                        </ul>
+
+                        <a href="https://www.youtube.com/watch?v=wSv5z3-0YHQ"
+                        target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
+                            Watch demo
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center small text-muted py-4">
+            <p>© <span id="year"></span> Sefa Avci</p>
+        </footer>
+
+        <button id="backToTop" class="btn btn-primary" aria-label="Back to top">↑</button>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+
+</html>

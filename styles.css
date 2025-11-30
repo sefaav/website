@@ -1,0 +1,112 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+    padding-top: 70px;
+}
+
+.brand {
+    font-weight: 700;
+    letter-spacing: .5px;
+}
+
+/* Hero background subtle */
+.bg-hero {
+    background: rgba(0, 0, 0, .03);
+}
+
+/* Card hover effect */
+.lift {
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.lift:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, .15);
+}
+
+/* Back-to-top button */
+#backToTop {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    display: none;
+    border-radius: 999px;
+}
+
+/* Timeline style */
+ul.timeline {
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.timeline li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: .5rem;
+}
+
+ul.timeline li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #007bff;
+}
+
+/* Dark theme */
+body.theme-dark {
+    background: #121212;
+    color: #eaeaea;
+}
+
+body.theme-dark .navbar,
+body.theme-dark .jumbotron,
+body.theme-dark .card,
+body.theme-dark .modal-content {
+    background: #1e1e1e !important;
+    color: #eaeaea;
+}
+
+body.theme-dark .btn-outline-primary {
+    color: #90caf9;
+    border-color: #90caf9;
+}
+
+body.theme-dark .btn-outline-primary:hover {
+    background: #90caf9;
+    color: #1e1e1e;
+}
+
+body.theme-dark .text-muted {
+    color: #bdbdbd !important;
+}
+
+/* experience list group items background in dark mode */
+body.theme-dark .list-group-item {
+    background-color: #1e1e1e;
+    color: #eaeaea;
+    border-color: #333;
+}
+
+/* attribute selector and descendant selector */
+input[required] {
+    border-left: 3px solid rgba(0, 123, 255, .4);
+}
+
+.navbar a.nav-link {
+    font-weight: 500;
+}
+
+/* Par défaut sur desktop : 50% */
+.responsive-img {
+    width: 50%; /* ou max-width: 50% si tu préfères */
+}
+
+/* Sur mobile : ≥ 768px, on passe à 75% */
+@media (max-width: 768px) {
+    .responsive-img {
+        width: 75%;
+    }
+}
