@@ -110,3 +110,26 @@ input[required] {
         width: 75%;
     }
 }
+
+/* Fixe la hauteur du carrousel pour éviter les sauts */
+.uniform-carousel .carousel-item {
+    height: 375px; /* choisis une hauteur assez grande pour ta plus grosse image */
+}
+
+/* Style des images pour qu'elles rentrent proprement dans la boîte */
+.uniform-carousel .carousel-item img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain; /* garde le ratio */
+    width: auto;
+    height: auto;
+    margin: auto;
+    display: block;
+}
+
+/* Sur mobile (écran ≤ 768px) : on réduit la hauteur */
+@media (max-width: 768px) {
+    .uniform-carousel .carousel-item {
+        height: 220px;
+    }
+}
