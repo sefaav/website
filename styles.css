@@ -101,7 +101,7 @@ input[required] {
 
 /* Par défaut sur desktop : 50% */
 .responsive-img {
-    width: 50%; /* ou max-width: 50% si tu préfères */
+    width: 50%;
 }
 
 /* Sur mobile : ≥ 768px, on passe à 75% */
@@ -111,16 +111,28 @@ input[required] {
     }
 }
 
+/* Par défaut sur desktop : 40% */
+.responsive-img-game-of-life {
+    width: 40%;
+}
+
+/* Sur mobile : ≥ 768px, on passe à 100% */
+@media (max-width: 768px) {
+    .responsive-img-game-of-life {
+        width: 100%;
+    }
+}
+
 /* Fixe la hauteur du carrousel pour éviter les sauts */
 .uniform-carousel .carousel-item {
-    height: 375px; /* choisis une hauteur assez grande pour ta plus grosse image */
+    height: 375px;
 }
 
 /* Style des images pour qu'elles rentrent proprement dans la boîte */
 .uniform-carousel .carousel-item img {
     max-height: 100%;
     max-width: 100%;
-    object-fit: contain; /* garde le ratio */
+    object-fit: contain;
     width: auto;
     height: auto;
     margin: auto;
