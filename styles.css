@@ -99,36 +99,36 @@ input[required] {
     font-weight: 500;
 }
 
-/* Par défaut sur desktop : 50% */
+/* Default on desktop: image takes 50% of the container width */
 .responsive-img {
     width: 50%;
 }
 
-/* Sur mobile : ≥ 768px, on passe à 75% */
+/* On mobile (≤ 768px): increase image width to 75% for better readability */
 @media (max-width: 768px) {
     .responsive-img {
         width: 75%;
     }
 }
 
-/* Par défaut sur desktop : 40% */
+/* Default on desktop: smaller image for Game of Life screenshots (40%) */
 .responsive-img-game-of-life {
     width: 40%;
 }
 
-/* Sur mobile : ≥ 768px, on passe à 100% */
+/* On mobile (≤ 768px): allow Game of Life images to use full width */
 @media (max-width: 768px) {
     .responsive-img-game-of-life {
         width: 100%;
     }
 }
 
-/* Fixe la hauteur du carrousel pour éviter les sauts */
+/* Fix carousel height to prevent layout jumps when switching images */
 .uniform-carousel .carousel-item {
     height: 375px;
 }
 
-/* Style des images pour qu'elles rentrent proprement dans la boîte */
+/* Ensure images fit nicely inside the fixed carousel container */
 .uniform-carousel .carousel-item img {
     max-height: 100%;
     max-width: 100%;
@@ -139,7 +139,7 @@ input[required] {
     display: block;
 }
 
-/* Sur mobile (écran ≤ 768px) : on réduit la hauteur */
+/* On mobile (≤ 768px): reduce carousel height to avoid excess empty space */
 @media (max-width: 768px) {
     .uniform-carousel .carousel-item {
         height: 220px;
