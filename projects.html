@@ -43,6 +43,86 @@
             <section class="mb-5">
                 <div class="card shadow-sm lift">
                     <div class="card-body">
+                    <h3 class="card-title">EPFL Events – Real-Time Event Web App</h3>
+                    <h6 class="text-muted mb-2">CS-214 · EPFL · Semester 3 · 2025</h6>
+                    <p class="text-muted">Built with Scala 3 · CS-214 WebApp framework · Scala.js UI · JSON wire protocol</p>
+
+                    <p>
+                        <strong>EPFL Events</strong> is a multi-user web application that lets authenticated users
+                        <strong>create</strong>, <strong>browse</strong> and <strong>manage</strong> events in real time.
+                        Users can open event pages, reserve seats (with capacity enforcement), cancel participation,
+                        and organizers can edit or delete their events while tracking the participant list.
+                    </p>
+
+                    <p>
+                        The project was developed as a team of three for the CS-214 <em>Software Construction</em> unguided lab.
+                        My main role focused on the <strong>application logic and state machine design</strong>, ensuring that
+                        navigation, validation rules and concurrency-safe updates behave correctly for multiple users.
+                    </p>
+
+                    <h5 class="mt-4">My role (Application Logic)</h5>
+                    <ul class="mb-3">
+                        <li><strong>State machine backend</strong>: implemented transitions for navigation (Home, Create, Manage, Detail, Edit) and per-user page state.</li>
+                        <li><strong>Validation & invariants</strong>: enforced non-empty fields, numeric constraints, and a strict date format (<code>DD.MM.YYYY HHhMM</code>) with future-only dates.</li>
+                        <li><strong>Booking rules</strong>: prevented overbooking, handled seat reservation and cancellation, and kept views consistent after actions.</li>
+                        <li><strong>Event lifecycle</strong>: enabled organizers to edit/delete events safely (creator-only access) and view participant lists.</li>
+                        <li><strong>Cleanup</strong>: added automatic pruning of past events based on stored event dates.</li>
+                    </ul>
+
+                    <h5 class="mt-4">Key features</h5>
+                    <ul class="mb-3">
+                        <li>Home page showing events created by all users, updated live.</li>
+                        <li>Event detail page with description, images, location (physical/virtual), price and remaining seats.</li>
+                        <li>Organizer tools: edit, delete, and see who registered.</li>
+                        <li>Participant actions: reserve a seat, cancel participation.</li>
+                        <li>Robust JSON wiring between frontend and backend to avoid “unknown error” states.</li>
+                    </ul>
+
+                    <h5 class="mt-4 mb-3">Image</h5>
+                    <img
+                        src="images/epfl_events.png"
+                        class="d-block mx-auto rounded responsive-img-large"
+                        alt="EPFL Events application screenshot"
+                    />
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
+                        <h3 class="card-title">Multicycle RISC-V CPU – Computer Architecture</h3>
+                        <h6 class="text-muted mb-2">CS-200 · EPFL · Semester 3 · 2025</h6>
+                        <p class="text-muted">Built with Verilog</p>
+
+                        <p>
+                            Designed and implemented a complete <strong>32-bit multicycle RISC-V CPU</strong> in <strong>Verilog</strong> (RTL),
+                            including the datapath, control unit, and a working memory/peripheral interface. The final system runs real
+                            RISC-V assembly programs end-to-end and supports realistic interactions through memory-mapped I/O.
+                        </p>
+
+                        <p>
+                            As a demonstration of correctness and integration, the CPU is able to run a full <strong>Conway’s Game of Life</strong>
+                            program (presented as a separate project on this website), where the simulation logic executes on the CPU and the
+                            state is displayed through the board’s I/O.
+                        </p>
+
+                        <h5 class="mt-4">What the CPU supports</h5>
+                        <ul class="mb-3">
+                            <li><strong>Core execution</strong>: instruction fetch/decode/execute with a multicycle controller (FSM).</li>
+                            <li><strong>32-bit ALU</strong>: arithmetic, logic, comparisons, and shifts following RISC-V semantics.</li>
+                            <li><strong>Datapath integration</strong>: PC, register file, immediates, control signals, and write-back.</li>
+                            <li><strong>External memory + memory-mapped peripherals</strong>: buttons/LEDs/displays accessed via addresses.</li>
+                            <li><strong>Interrupt handling</strong>: CSR-based interrupt flow with proper return (mret) and context restore.</li>
+                            <li><strong>Verification</strong>: simulation with Verilator, waveform debugging with GTKWave, and targeted test programs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
                         <h3 class="card-title">Game of Life – RISC-V Assembly Implementation</h3>
                         <h6 class="text-muted mb-2">CS-200 · EPFL · Semester 3 · 2025</h6>
                         <p class="text-muted">Built with RISC-V Assembly</p>
@@ -181,7 +261,7 @@
                     <div class="card-body">
                         <h3 class="card-title">Online BlackJack – Full-Stack Web App</h3>
                         <h6 class="text-muted mb-2">CS50x Final Project · Harvard · 2025</h6>
-                        <p class="text-muted">Built with Python, Flask, JavaScript, HTML/CSS</p>
+                        <p class="text-muted">Built with Python · Flask · JavaScript · HTML/CSS</p>
                         <p class="card-text">
                             <strong>Online BlackJack</strong> is a full-stack web application that lets a single player
                             practice Blackjack against a dealer with a clean, modern UI and persistent statistics.
