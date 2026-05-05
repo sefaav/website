@@ -37,9 +37,67 @@
             <header class="mt-4 mb-4 text-center">
                 <h1>Projects</h1>
                 <p class="text-muted mb-0">
-                    A selection of software, hardware, and coursework projects spanning algorithms, web development, and systems programming.
+                    A selection of machine learning, software, systems, and hardware projects, covering algorithms, web applications, and data-driven modeling.
                 </p>
             </header>
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
+                        <h3 class="card-title">Machine Learning Pipeline – Classification, Regression & Performance Analysis</h3>
+                        <h6 class="text-muted mb-2">Introduction to Machine Learning · EPFL · 2026</h6>
+                        <p class="text-muted">Built with Python · NumPy · Matplotlib</p>
+
+                        <p>
+                            This project focuses on implementing and comparing several classical machine learning methods
+                            for both classification and regression tasks, using a dataset provided as part of an EPFL coursework project.
+                            The goal was to understand the full machine learning workflow, including preprocessing,
+                            validation strategies, hyperparameter tuning, and model evaluation.
+                        </p>
+
+                        <p>
+                            We worked within a provided framework and implemented key components of
+                            <strong>Logistic Regression</strong>, <strong>Linear Regression</strong>, and
+                            <strong>K-Nearest Neighbors (KNN)</strong>, extending the base structure with
+                            additional features such as validation pipelines, regularization, and performance analysis.
+                        </p>
+
+                        <h5 class="mt-4">My contributions</h5>
+                        <ul class="mb-3">
+                            <li><strong>Logistic Regression</strong>: implemented multi-class softmax classifier trained with gradient descent.</li>
+                            <li><strong>Linear Regression</strong>: implemented closed-form solution with L2 regularization</li>
+                            <li><strong>KNN</strong>: implemented classification and regression using Euclidean distance</li>
+                            <li><strong>Model selection</strong>: designed validation-based grid search for hyperparameters (learning rate, iterations, regularization, K).</li>
+                            <li><strong>Evaluation pipeline</strong>: used accuracy, macro F1-score, and MSE to compare models.</li>
+                            <li><strong>Analysis tools</strong>: added confusion matrix, runtime measurements, and a <code>--plot</code> option for visualization.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Key results (on provided dataset)</h5>
+                        <ul class="mb-3">
+                            <li>Logistic Regression achieved about <strong>88.5% test accuracy</strong> on the classification task.</li>
+                            <li>Linear Regression achieved the best regression performance with a test MSE of about <strong>0.994</strong>.</li>
+                            <li>KNN provided a useful baseline but showed slower prediction and weaker generalization.</li>
+                        </ul>
+
+                        <p>
+                            These results are specific to the dataset provided for the project and illustrate how different models behave
+                            in practice. Logistic Regression performed best for classification, suggesting that linear decision boundaries
+                            capture a substantial part of the structure of the data, while Linear Regression was most effective for regression.
+                        </p>
+
+                        <p>
+                            This project strengthened my understanding of how to implement, tune, and evaluate machine learning models
+                            in a rigorous way, and how to compare different approaches in terms of both predictive performance
+                            and computational efficiency.
+                        </p>
+                        <a href="files/ms1_report.pdf" 
+                        target="_blank" rel="noopener noreferrer"    
+                        class="btn btn-primary">
+                            View report
+                        </a>
+                    </div>
+                </div>
+            </section>
 
             <section class="mb-5">
                 <div class="card shadow-sm lift">
