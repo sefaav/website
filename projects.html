@@ -44,8 +44,71 @@
             <section class="mb-5">
                 <div class="card shadow-sm lift">
                     <div class="card-body">
+                        <h3 class="card-title">Neural Networks from Scratch – MLP, K-Means & Model Selection</h3>
+                        <h6 class="text-muted mb-2">CS-233 · EPFL · Semester 4 · 2026</h6>
+                        <p class="text-muted">Built with Python · NumPy · Matplotlib</p>
+
+                        <p>
+                            This project focuses on implementing and evaluating neural-network and clustering methods
+                            from scratch for both classification and regression tasks. Using the Gaming and Mental Health dataset,
+                            the goal was to predict addiction level and addiction score from behavioral and mental-health related features.
+                        </p>
+
+                        <p>
+                            We worked within a provided machine learning framework and implemented a complete
+                            <strong>Multi-Layer Perceptron (MLP)</strong> with manual forward propagation,
+                            backpropagation, mini-batch gradient descent, regularization, and early stopping.
+                            We also implemented <strong>K-Means</strong> clustering and adapted it for classification
+                            by assigning labels to clusters through majority voting.
+                        </p>
+
+                        <h5 class="mt-4">My contributions</h5>
+                        <ul class="mb-3">
+                            <li><strong>MLP from scratch</strong>: implemented fully connected layers, forward pass, backpropagation, and weight/bias updates using NumPy.</li>
+                            <li><strong>Classification loss</strong>: implemented Softmax output with Cross-Entropy loss for multi-class classification.</li>
+                            <li><strong>Regression model</strong>: used an Identity output activation with MSE loss to predict continuous addiction scores.</li>
+                            <li><strong>Regularization & early stopping</strong>: added L2 regularization, validation-loss monitoring, and restoration of the best model weights.</li>
+                            <li><strong>K-Means</strong>: implemented vectorized distance computation, cluster updates, empty-cluster handling, and label assignment by majority vote.</li>
+                            <li><strong>Model selection</strong>: designed validation-based grid search over architecture, learning rate, batch size, regularization, and number of clusters.</li>
+                            <li><strong>Evaluation pipeline</strong>: compared models using accuracy, macro F1-score, MSE, confusion matrices, loss curves, and runtime measurements.</li>
+                        </ul>
+
+                        <h5 class="mt-4">Key results (on provided dataset)</h5>
+                        <ul class="mb-3">
+                            <li>The best MLP classifier achieved about <strong>87.0% test accuracy</strong> and <strong>0.811 macro F1-score</strong>.</li>
+                            <li>The MLP regression model achieved a test MSE of about <strong>0.999</strong>.</li>
+                            <li>K-Means provided a useful unsupervised baseline but performed worse for classification, especially on minority classes.</li>
+                        </ul>
+
+                        <p>
+                            The results showed that the MLP significantly outperformed K-Means on classification,
+                            mainly because it directly used labels during training. The use of Cross-Entropy improved
+                            macro F1-score by helping the model handle the rare <em>High</em> addiction class more effectively.
+                            For regression, the MLP generalized well and achieved performance close to simpler linear models,
+                            suggesting that the target score is largely explained by structured relationships in the features.
+                        </p>
+
+                        <p>
+                            This project strengthened my understanding of how neural networks work internally,
+                            especially how activation functions, losses, gradients, regularization, and early stopping interact
+                            during training. It also gave me practical experience building a rigorous model-selection pipeline
+                            and interpreting results beyond accuracy alone.
+                        </p>
+
+                        <a href="files/ms2_report.pdf"
+                        target="_blank" rel="noopener noreferrer"
+                        class="btn btn-primary">
+                            View report
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <div class="card shadow-sm lift">
+                    <div class="card-body">
                         <h3 class="card-title">Machine Learning Pipeline – Classification, Regression & Performance Analysis</h3>
-                        <h6 class="text-muted mb-2">Introduction to Machine Learning · EPFL · 2026</h6>
+                        <h6 class="text-muted mb-2">CS-233 · EPFL · Semester 4 · 2026</h6>
                         <p class="text-muted">Built with Python · NumPy · Matplotlib</p>
 
                         <p>
