@@ -9,9 +9,13 @@
         <title>Sefa Avci – Home</title>
         <link rel="icon" type="image/png" href="favicon.png">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
         <link href="styles.css" rel="stylesheet">
     </head>
-    
+
     <body class="theme-dark">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top shadow-sm">
@@ -25,6 +29,9 @@
                     <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="files/Sefa_Avci_CV.pdf" target="_blank" rel="noopener noreferrer">CV</a></li>
+                    <li class="nav-item"><a class="nav-link nav-icon-link" href="https://github.com/sefaav" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a></li>
+                    <li class="nav-item"><a class="nav-link nav-icon-link" href="https://www.linkedin.com/in/sefa-avci-a89042328" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></li>
                     <li class="nav-item ml-md-3">
                         <div class="custom-control custom-switch">
                             <input type="checkbox" class="custom-control-input" id="themeSwitch" aria-label="Theme switch">
@@ -36,19 +43,134 @@
         </nav>
 
         <main class="container pt-5">
-            <section class="jumbotron text-center mt-4 bg-hero">
-                <h1 class="display-4">CS student passionate about AI</h1>
-                <p class="lead">French–Turkish student into artificial intelligence and quantitative finance; tennis and mountain hiking fan.</p>
-                <p>
-                    <span class="badge badge-primary badge-pill">French (native)</span>
-                    <span class="badge badge-info badge-pill">English B2</span>
-                    <span class="badge badge-warning badge-pill">Turkish B2</span>
+            <section class="hero mt-4">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <p class="kicker mb-3"><span class="live-dot"></span>Artificial Intelligence · Machine Learning · Quantitative Finance</p>
+                        <h1 class="hero-title">Turning data into <span class="text-gradient">intelligent decisions</span></h1>
+                        <p class="lead hero-sub" style="max-width: 540px;">
+                            EPFL Computer Science student building machine learning systems and quantitative trading research —
+                            from neural networks implemented from scratch to a full backtesting platform tested on real market data.
+                        </p>
+                        <p class="mb-4">
+                            <span class="badge badge-primary badge-pill">French (native)</span>
+                            <span class="badge badge-info badge-pill">English B2</span>
+                            <span class="badge badge-warning badge-pill">Turkish B2</span>
+                        </p>
+                        <div class="hero-cta">
+                            <a class="btn btn-primary btn-lg" href="projects.html" role="button">See projects</a>
+                            <a class="btn btn-outline-light btn-lg" href="https://github.com/sefaav" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 mt-5 mt-lg-0">
+                        <div class="hero-visual">
+                            <svg class="hero-chart" viewBox="0 0 300 130" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+                                <path class="chart-line" d="M0,102 L38,84 L76,94 L114,56 L152,70 L190,32 L228,48 L266,18 L300,26" />
+                                <circle class="chart-dot" cx="0" cy="102" r="3" style="--dd:.6s"></circle>
+                                <circle class="chart-dot" cx="76" cy="94" r="3" style="--dd:.95s"></circle>
+                                <circle class="chart-dot" cx="152" cy="70" r="3" style="--dd:1.3s"></circle>
+                                <circle class="chart-dot" cx="228" cy="48" r="3" style="--dd:1.65s"></circle>
+                                <circle class="chart-dot" cx="300" cy="26" r="3" style="--dd:2s"></circle>
+                            </svg>
+                            <div class="hero-terminal">
+                                <div class="term-dots"><span></span><span></span><span></span></div>
+                                <div class="term-line" style="--d:0"><span class="prompt">$</span> quantlab backtest --config momentum.yaml</div>
+                                <div class="term-line ok" style="--d:1">✓ data validated — no look-ahead bias</div>
+                                <div class="term-line ok" style="--d:2">✓ walk-forward validation passed</div>
+                                <div class="term-line ok" style="--d:3">✓ report generated → report.html</div>
+                                <div class="term-line" style="--d:4"><span class="prompt">$</span> <span class="term-cursor"></span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-5 mb-5 reveal">
+                <p class="kicker mb-2 text-center">Featured project</p>
+                <h2 class="text-center mb-4">Latest work: QuantLab</h2>
+                <div class="card featured-card lift">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                            <div>
+                                <h3 class="card-title mb-1">QuantLab <span class="badge-featured">Featured</span></h3>
+                                <p class="text-muted mb-0">Reproducible quantitative research platform, built solo</p>
+                            </div>
+                            <a href="https://github.com/sefaav/QuantLab" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm mt-2 mt-md-0">
+                                <i class="bi bi-github"></i> View on GitHub
+                            </a>
+                        </div>
+                        <p>
+                            A Python framework that turns financial hypotheses into reproducible, leak-free research:
+                            data validation, feature engineering, walk-forward backtesting with realistic transaction costs,
+                            and automated risk reporting — with a look-ahead-safe engine enforced by design.
+                        </p>
+                        <p class="mb-2">
+                            <span class="tech-badge">Python</span><span class="tech-badge">Pandas</span><span class="tech-badge">NumPy</span><span class="tech-badge">Streamlit</span><span class="tech-badge">Typer</span><span class="tech-badge">pytest</span>
+                        </p>
+                        <ul class="feature-highlights">
+                            <li><i class="bi bi-check2-circle"></i> <span>Look-ahead-safe backtest engine — signal at <code>t</code>, position at <code>t+1</code>, enforced by construction, not convention</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Realistic execution costs, walk-forward validation, and bootstrap/permutation testing for statistical honesty</span></li>
+                            <li><i class="bi bi-check2-circle"></i> <span>Three interfaces sharing one core: a Python API, a CLI, and an interactive Streamlit dashboard</span></li>
+                        </ul>
+                        <a href="projects.html#quantlab" class="btn btn-primary mt-2">View full project</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mb-5">
+                <p class="kicker mb-2 text-center">Capabilities</p>
+                <h2 class="text-center mb-2">Where I go deep</h2>
+                <p class="text-muted text-center mb-4 mx-auto" style="max-width: 580px;">
+                    Three areas I keep coming back to, each explored from first principles.
                 </p>
-                <a class="btn btn-primary btn-lg" href="projects.html" role="button">See projects</a>
+                <div class="row justify-content-center">
+                    <div class="col-lg-4 col-md-6 mb-4 reveal" style="--i:0">
+                        <div class="skill-card h-100">
+                            <span class="card-index">01</span>
+                            <i class="bi bi-cpu skill-icon"></i>
+                            <h5>Machine Learning & AI</h5>
+                            <p class="skill-hook">Built from first principles — forward pass, backprop, and gradient descent by hand.</p>
+                            <ul class="skill-list">
+                                <li><i class="bi bi-check2"></i> <span>Multi-layer perceptrons with manual forward pass, backprop, softmax cross-entropy, and L2 regularization — raw NumPy, no autograd</span></li>
+                                <li><i class="bi bi-check2"></i> <span>K-Means built from scratch: vectorized distances, empty-cluster handling, majority-vote labeling</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Validation-based grid search across architecture, learning rate, batch size, and regularization</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Evaluation beyond accuracy — macro F1, confusion matrices, loss curves, runtime profiling</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 reveal" style="--i:1">
+                        <div class="skill-card h-100">
+                            <span class="card-index">02</span>
+                            <i class="bi bi-graph-up-arrow skill-icon"></i>
+                            <h5>Quantitative Finance</h5>
+                            <p class="skill-hook">Focused on the details that make backtests trustworthy.</p>
+                            <ul class="skill-list">
+                                <li><i class="bi bi-check2"></i> <span>Look-ahead-safe engine — signal at <code>t</code>, position at <code>t+1</code>, enforced by construction</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Realistic execution costs — commission, spread, slippage — gross vs. net reported separately</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Walk-forward validation plus bootstrap and permutation testing for statistical honesty</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Risk analytics from first principles — Sharpe, Sortino, Calmar, VaR/CVaR, alpha/beta</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mb-4 reveal" style="--i:2">
+                        <div class="skill-card h-100">
+                            <span class="card-index">03</span>
+                            <i class="bi bi-motherboard skill-icon"></i>
+                            <h5>Systems & Low-Level</h5>
+                            <p class="skill-hook">From CPU design in Verilog to the assembly code running on it.</p>
+                            <ul class="skill-list">
+                                <li><i class="bi bi-check2"></i> <span>Designed a 32-bit multicycle RISC-V CPU in Verilog — datapath, control FSM, interrupts, memory-mapped I/O</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Hand-wrote Conway's Game of Life in RISC-V assembly, running on simulated hardware</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Verified designs with Verilator simulation and GTKWave waveform debugging</span></li>
+                                <li><i class="bi bi-check2"></i> <span>Built real-time multi-user systems in Scala with concurrency-safe state machines</span></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section class="row">
-                <article class="col-md-6 mb-4">
+                <article class="col-md-6 mb-4 reveal" style="--i:0">
                     <div class="card h-100 lift">
                         <div class="card-body">
                             <h5 class="card-title">About</h5>
@@ -57,7 +179,7 @@
                         </div>
                     </div>
                 </article>
-                <article class="col-md-6 mb-4">
+                <article class="col-md-6 mb-4 reveal" style="--i:1">
                     <div class="card h-100 lift">
                         <div class="card-body">
                             <h5 class="card-title">Experience</h5>
@@ -70,7 +192,12 @@
         </main>
 
         <footer class="text-center small text-muted py-4">
-            <p>© <span id="year"></span> Sefa Avci · Built with Bootstrap</p>
+            <div class="social-links mb-2">
+                <a href="https://github.com/sefaav" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                <a href="https://www.linkedin.com/in/sefa-avci-a89042328" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                <a href="mailto:sefa.avci@epfl.ch" aria-label="Email"><i class="bi bi-envelope"></i></a>
+            </div>
+            <p>© <span id="year"></span> Sefa Avci</p>
         </footer>
 
         <button id="backToTop" class="btn btn-primary" aria-label="Back to top">↑</button>

@@ -67,6 +67,41 @@ if (yearEl) yearEl.textContent = new Date().getFullYear();
     });
 })();
 
+// Scroll reveal: elements marked .reveal fade/slide in once they enter
+// the viewport. .reveal-init is added here (not in the CSS default
+// state) so content stays visible if JS never runs.
+(function() {
+    const items = document.querySelectorAll('.reveal');
+    if (!items.length || !('IntersectionObserver' in window)) return;
+
+    items.forEach(el => el.classList.add('reveal-init'));
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+
+    items.forEach(el => observer.observe(el));
+})();
+
+// Card spotlight: a soft glass highlight that follows the cursor,
+// driven by CSS custom properties consumed in styles.css.
+(function() {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const targets = document.querySelectorAll('.card, .skill-card');
+    targets.forEach(el => {
+        el.addEventListener('mousemove', (e) => {
+            const rect = el.getBoundingClientRect();
+            el.style.setProperty('--spot-x', `${e.clientX - rect.left}px`);
+            el.style.setProperty('--spot-y', `${e.clientY - rect.top}px`);
+        });
+    });
+})();
+
 // Friendly console greeting on the homepage
 if (location.pathname.endsWith('index.html') || location.pathname === '/') {
     console.log("Welcome to Sefa's site!");
