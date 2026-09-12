@@ -25,6 +25,7 @@
             </button>
             <div class="collapse navbar-collapse" id="nav">
                 <ul class="navbar-nav ml-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link" href="research.html">Research</a></li>
                     <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
                     <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
                     <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
@@ -49,8 +50,9 @@
                         <p class="kicker mb-3"><span class="live-dot"></span>Artificial Intelligence · Machine Learning · Quantitative Finance</p>
                         <h1 class="hero-title">Turning data into <span class="text-gradient">intelligent decisions</span></h1>
                         <p class="lead hero-sub" style="max-width: 540px;">
-                            EPFL Computer Science student building machine learning systems and quantitative trading research —
-                            from neural networks implemented from scratch to a full backtesting platform tested on real market data.
+                            EPFL Computer Science student working on quantitative research, machine learning, and statistical
+                            modeling — from reproducible empirical studies in financial markets to research and backtesting
+                            infrastructure.
                         </p>
                         <p class="mb-4">
                             <span class="badge badge-primary badge-pill">French (native)</span>
@@ -58,7 +60,8 @@
                             <span class="badge badge-warning badge-pill">Turkish B2</span>
                         </p>
                         <div class="hero-cta">
-                            <a class="btn btn-primary btn-lg" href="projects.html" role="button">See projects</a>
+                            <a class="btn btn-primary btn-lg" href="research.html" role="button">See research</a>
+                            <a class="btn btn-outline-light btn-lg" href="projects.html" role="button">See projects</a>
                             <a class="btn btn-outline-light btn-lg" href="https://github.com/sefaav" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i> GitHub</a>
                         </div>
                     </div>
@@ -86,8 +89,36 @@
             </section>
 
             <section class="mt-5 mb-5 reveal">
-                <p class="kicker mb-2 text-center">Featured project</p>
-                <h2 class="text-center mb-4">Latest work: QuantLab</h2>
+                <p class="kicker mb-2 text-center">Latest research</p>
+                <h2 class="text-center mb-4">Does ADF Filtering Improve Pairs-Trading Performance Out of Sample?</h2>
+                <div class="card featured-card lift">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
+                            <div>
+                                <h3 class="card-title mb-1">Independent Research <span class="badge-featured">2026</span></h3>
+                                <p class="text-muted mb-0">Walk-forward study on pairs-trading stationarity filtering</p>
+                            </div>
+                            <a href="https://github.com/sefaav/Quant-Research-Notebooks" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary btn-sm mt-2 mt-md-0">
+                                <i class="bi bi-github"></i> View on GitHub
+                            </a>
+                        </div>
+                        <p>
+                            A reproducible walk-forward study across 92 economically related ETF pairs and 34 folds, testing
+                            whether ADF stationarity filtering applied during the formation window improves subsequent
+                            out-of-sample pairs-trading performance.
+                        </p>
+                        <p class="mb-2">
+                            <span class="tech-badge">Python</span><span class="tech-badge">Statistics</span><span class="tech-badge">Hypothesis Testing</span><span class="tech-badge">Time Series</span><span class="tech-badge">Pairs Trading</span><span class="tech-badge">Jupyter</span>
+                        </p>
+                        <p class="mb-0"><strong>Result:</strong> no statistically detectable out-of-sample benefit from the filter in this experiment.</p>
+                        <a href="research.html" class="btn btn-primary mt-3">View research</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="mt-5 mb-5 reveal">
+                <p class="kicker mb-2 text-center">Featured platform</p>
+                <h2 class="text-center mb-4">QuantLab — Reproducible Quantitative Research Platform</h2>
                 <div class="card featured-card lift">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-start flex-wrap mb-2">
